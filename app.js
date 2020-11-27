@@ -12,6 +12,7 @@ require("./routes/Tag")(app);
 require("./routes/Quocgia")(app);
 require("./routes/Tintuc")(app);
 require("./routes/Tour")(app);
+require("./routes/Ngaydi")(app);
 
 var port = process.env.PORT || 666;
 app.listen(port, () => { console.log("Đang chạy trên cổng " + port + " nha mấy đứa :))"); })
