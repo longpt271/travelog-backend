@@ -10,10 +10,10 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Tour.belongsTo(models.Diadiem),
-        Tour.belongsToMany(models.User, {
-          through: "Binhluans"
-        }),
+
+      Tour.belongsToMany(models.User, {
+        through: "Binhluans"
+      }),
         Tour.belongsToMany(models.Dichvu, {
           through: "DichvuTours"
         }),
@@ -26,18 +26,14 @@ module.exports = (sequelize, DataTypes) => {
         Tour.hasMany(models.Anh),
         Tour.belongsToMany(models.Loaitour, {
           through: "TourLoaitours"
+        }),
+        Tour.belongsToMany(models.Diadiem, {
+          through: "TourDiadiems"
         })
     }
   };
   Tour.init({
     name: DataTypes.STRING,
-    diadiemId: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "Diadiem",
-        key: "id"
-      }
-    },
     gianguoilon: DataTypes.INTEGER,
     giatreem: DataTypes.INTEGER,
     giaembe: DataTypes.INTEGER,

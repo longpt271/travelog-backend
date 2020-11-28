@@ -11,14 +11,6 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      diadiemId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Diadiems",
-          key: "id"
-        },
-        onDelete: "CASCADE"
-      },
       gianguoilon: {
         type: Sequelize.INTEGER
       },
