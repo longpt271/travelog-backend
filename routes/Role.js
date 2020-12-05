@@ -6,7 +6,7 @@ module.exports = app => {
     router.get('/', role.findall);
     router.get('/:id', role.findone);
     router.delete('/:id', role.delete);
-    router.put('/:id', role.update);
+    router.patch('/:id', role.update);
 
     app.use("/roles", router);
 }

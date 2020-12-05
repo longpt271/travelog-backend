@@ -6,7 +6,7 @@ module.exports = app => {
     router.get('/', Tag.findall);
     router.get('/:id', Tag.findone);
     router.delete('/:id', Tag.delete);
-    router.put('/:id', Tag.update);
+    router.patch('/:id', Tag.update);
 
     app.use("/tags", router);
 }

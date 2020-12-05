@@ -6,7 +6,7 @@ module.exports = app => {
     router.get('/', Binhluan.findall);
     router.get('/:id', Binhluan.findone);
     router.delete('/:id', Binhluan.delete);
-    router.put('/:id', Binhluan.update);
+    router.patch('/:id', Binhluan.update);
 
     app.use("/binhluans", router);
 }

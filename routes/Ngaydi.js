@@ -6,7 +6,7 @@ module.exports = app => {
     router.get('/', ngaydi.findall);
     router.get('/:id', ngaydi.findone);
     router.delete('/:id', ngaydi.delete);
-    router.put('/:id', ngaydi.update);
+    router.patch('/:id', ngaydi.update);
 
     app.use("/ngaydis", router);
 }

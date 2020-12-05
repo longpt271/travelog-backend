@@ -6,7 +6,7 @@ module.exports = app => {
     router.get('/', Tour.findall);
     router.get('/:id', Tour.findone);
     router.delete('/:id', Tour.delete);
-    router.put('/:id', Tour.update);
+    router.patch('/:id', Tour.update);
     router.post('/dichvu', Tour.adddichvu);
     router.post('/loaitour', Tour.addloaitour);
     router.post('/ngaydi', Tour.addNgaydi);

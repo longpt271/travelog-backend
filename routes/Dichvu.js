@@ -6,7 +6,7 @@ module.exports = app => {
     router.get('/', Dichvu.findall);
     router.get('/:id', Dichvu.findone);
     router.delete('/:id', Dichvu.delete);
-    router.put('/:id', Dichvu.update);
+    router.patch('/:id', Dichvu.update);
 
     app.use("/dichvus", router);
 }

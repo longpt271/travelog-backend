@@ -6,7 +6,7 @@ module.exports = app => {
     router.get('/', lienhe.findall);
     router.get('/:id', lienhe.findone);
     router.delete('/:id', lienhe.delete);
-    router.put('/:id', lienhe.update);
+    router.patch('/:id', lienhe.update);
 
     app.use("/lienhes", router);
 }

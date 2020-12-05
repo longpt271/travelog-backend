@@ -6,7 +6,7 @@ module.exports = app => {
     router.get('/', Mangxahoi.findall);
     router.get('/:id', Mangxahoi.findone);
     router.delete('/:id', Mangxahoi.delete);
-    router.put('/:id', Mangxahoi.update);
+    router.patch('/:id', Mangxahoi.update);
 
     app.use("/mangxahois", router);
 }

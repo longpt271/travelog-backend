@@ -6,7 +6,7 @@ module.exports = app => {
     router.get('/', Tintuc.findall);
     router.get('/:id', Tintuc.findone);
     router.delete('/:id', Tintuc.delete);
-    router.put('/:id', Tintuc.update);
+    router.patch('/:id', Tintuc.update);
     router.post('/tags', Tintuc.addtag);
     app.use("/tintucs", router);
 }

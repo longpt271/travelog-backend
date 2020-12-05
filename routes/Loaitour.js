@@ -6,7 +6,7 @@ module.exports = app => {
     router.get('/', loaitour.findall);
     router.get('/:id', loaitour.findone);
     router.delete('/:id', loaitour.delete);
-    router.put('/:id', loaitour.update);
+    router.patch('/:id', loaitour.update);
 
     app.use("/loaitours", router);
 }

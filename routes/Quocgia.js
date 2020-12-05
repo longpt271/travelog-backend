@@ -6,7 +6,7 @@ module.exports = app => {
     router.get('/', Quocgia.findall);
     router.get('/:id', Quocgia.findone);
     router.delete('/:id', Quocgia.delete);
-    router.put('/:id', Quocgia.update);
+    router.patch('/:id', Quocgia.update);
 
     app.use("/quocgias", router);
 }

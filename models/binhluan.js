@@ -10,7 +10,13 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Binhluan.belongsTo(models.Tour,
+        {
+          foreignKey: "tourId"
+        });
+      Binhluan.belongsTo(models.User, {
+        foreignKey: "userId"
+      })
     }
   };
   Binhluan.init({

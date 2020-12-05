@@ -1,43 +1,36 @@
-var User = require('../models').User;
-var UserRole = require('../models').UserRole;
-var Binhluan = require("../models").Binhluan;
+var Hoadon = require('../models').Hoadon;
+var Tour = require("../models").Tour;
+var User = require("../models").User;
 exports.create = (req, res) => {
-    User.create(req.body).then(data => {
+    Hoadon.create(req.body).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.findall = (req, res) => {
-    User.findAll().then(data => {
+    Hoadon.findAll({ include: [Tour, User] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.findone = (req, res) => {
-    User.findOne({ where: { id: req.params.id } }).then(data => {
+    Hoadon.findOne({ where: { id: req.params.id } }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.delete = (req, res) => {
-    User.destroy({ where: { id: req.params.id } }).then(data => {
+    Hoadon.destroy({ where: { id: req.params.id } }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.update = (req, res) => {
-    User.update(req.body, { where: { id: req.params.id } }).then(data => {
-        res.json({ data: data })
-    }).catch(er => {
-        throw er;
-    })
-}
-exports.addrole = (req, res) => {
-    UserRole.create(req.body).then(data => {
+    Hoadon.update(req.body, { where: { id: req.params.id } }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
