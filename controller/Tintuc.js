@@ -2,17 +2,18 @@ var Tintuc = require('../models').Tintuc;
 var Tag = require('../models').Tag;
 var TintucTag = require("../models").TintucTag;
 exports.create = (req, res) => {
-    Tintuc.create(req.body).then(data => {
+    Tintuc.create(req.body, { include: [TintucTag] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.findall = (req, res) => {
-    Tintuc.findAll({ include: [Tag] }).then(data => {
+    Tintuc.findAll({ order: [["id", "DESC"]], include: [Tag] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
+        // res.json({ er: er.message })
     })
 }
 exports.findone = (req, res) => {

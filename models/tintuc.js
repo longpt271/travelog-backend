@@ -12,7 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Tintuc.belongsToMany(models.Tag, {
         through: "TintucTags"
-      })
+      });
+      Tintuc.hasMany(models.TintucTag)
     }
   };
   Tintuc.init({

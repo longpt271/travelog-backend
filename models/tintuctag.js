@@ -10,7 +10,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      TintucTag.belongsTo(models.Tag, {
+        foreignKey: "tagId"
+      });
+      TintucTag.belongsTo(models.Tintuc, {
+        foreignKey: "tintucId"
+      });
     }
   };
   TintucTag.init({

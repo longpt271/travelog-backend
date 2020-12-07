@@ -23,9 +23,11 @@ require("./routes/Binhluan")(app);
 require("./routes/Anh")(app);
 require("./routes/Dichvu")(app);
 require("./routes/Hoadon")(app);
+require("./routes/TintucTag")(app);
+require("./routes/Role")(app);
 
 app.use(function (err, req, res, next) {
-    res.status(500).send(err.message)
+    res.status(500).send(err)
 })
 var port = process.env.PORT || 666;
 app.listen(port, () => { console.log("Đang chạy trên cổng " + port + " nha mấy đứa :))"); })
