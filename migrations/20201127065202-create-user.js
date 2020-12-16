@@ -21,7 +21,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       avatar: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1000)
+      },
+      tenanh: {
+        type: Sequelize.STRING(500)
       },
       diachi: {
         type: Sequelize.STRING

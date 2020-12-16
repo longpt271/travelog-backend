@@ -24,6 +24,21 @@ module.exports = {
         },
         onDelete: 'CASCADE'
       },
+      chamngon: {
+        type: Sequelize.STRING(1000)
+      },
+      website: {
+        type: Sequelize.STRING
+      },
+      kynang: {
+        type: Sequelize.STRING(5000)
+      },
+      facebook: {
+        type: Sequelize.STRING(500)
+      },
+      github: {
+        type: Sequelize.STRING(500)
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

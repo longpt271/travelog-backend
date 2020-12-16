@@ -33,7 +33,9 @@ module.exports = (sequelize, DataTypes) => {
         key: "id"
       }
     },
-    soluong: DataTypes.INTEGER
+    nguoilon: DataTypes.INTEGER,
+    treem: DataTypes.INTEGER,
+    embe: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Hoadon',

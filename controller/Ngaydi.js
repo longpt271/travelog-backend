@@ -7,7 +7,7 @@ exports.create = (req, res) => {
     })
 }
 exports.findall = (req, res) => {
-    Ngaydi.findAll().then(data => {
+    Ngaydi.findAll({ order: [['id', 'DESC']] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;

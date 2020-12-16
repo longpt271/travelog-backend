@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Ngaydi.init({
-    ngay: DataTypes.DATE,
+    ngay: DataTypes.STRING,
     status: DataTypes.INTEGER
   }, {
     sequelize,

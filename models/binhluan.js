@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
         key: "id"
       }
     },
-    binhluan: DataTypes.STRING,
+    binhluan: DataTypes.STRING(1000),
     star: DataTypes.INTEGER,
     status: DataTypes.INTEGER
   }, {

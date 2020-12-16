@@ -9,7 +9,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(500)
+      },
+      avatar: {
+        type: Sequelize.STRING(5000)
+      },
+      tenanh: {
+        type: Sequelize.STRING(1000)
       },
       gianguoilon: {
         type: Sequelize.INTEGER
@@ -24,13 +30,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       chitiettour: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       luuy: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       bando: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(5000)
       },
       status: {
         type: Sequelize.INTEGER

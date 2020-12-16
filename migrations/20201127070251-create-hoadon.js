@@ -24,7 +24,13 @@ module.exports = {
         },
         onDelete: "CASCADE"
       },
-      soluong: {
+      nguoilon: {
+        type: Sequelize.INTEGER
+      },
+      treem: {
+        type: Sequelize.INTEGER
+      },
+      embe: {
         type: Sequelize.INTEGER
       },
       createdAt: {

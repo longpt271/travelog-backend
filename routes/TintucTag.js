@@ -4,7 +4,7 @@ module.exports = app => {
 
     router.post("/", TintucTag.create);
     router.get('/', TintucTag.findall);
-    router.get('/:id', TintucTag.findone);
+    router.get('/:id', TintucTag.findtintucId);
     router.delete('/:id', TintucTag.delete);
     router.patch('/:id', TintucTag.update);
 

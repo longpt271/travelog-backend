@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
   Lienhe.init({
     sdt: DataTypes.STRING,
     email: DataTypes.STRING,
-    diachi: DataTypes.STRING
+    diachi: DataTypes.STRING(1000),
+    status: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Lienhe',

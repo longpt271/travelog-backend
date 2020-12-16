@@ -15,7 +15,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       diachi: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1000)
+      },
+      status: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

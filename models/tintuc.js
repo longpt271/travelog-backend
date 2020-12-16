@@ -18,13 +18,14 @@ module.exports = (sequelize, DataTypes) => {
   };
   Tintuc.init({
     name: DataTypes.STRING,
-    tomtat: DataTypes.STRING,
-    content: DataTypes.STRING,
+    tomtat: DataTypes.STRING(1000),
+    content: DataTypes.TEXT,
     tacgia: DataTypes.STRING,
-    anh: DataTypes.STRING,
-    facebook: DataTypes.STRING,
-    instagram: DataTypes.STRING,
-    twitch: DataTypes.STRING,
+    anh: DataTypes.STRING(5000),
+    tenanh: DataTypes.STRING(1000),
+    facebook: DataTypes.STRING(500),
+    instagram: DataTypes.STRING(500),
+    twitch: DataTypes.STRING(500),
     status: DataTypes.INTEGER
   }, {
     sequelize,

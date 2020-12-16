@@ -12,25 +12,28 @@ module.exports = {
         type: Sequelize.STRING
       },
       tomtat: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1000)
       },
       content: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       tacgia: {
         type: Sequelize.STRING
       },
       anh: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(5000)
+      },
+      tenanh: {
+        type: Sequelize.STRING(1000)
       },
       facebook: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(500)
       },
       instagram: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(500)
       },
       twitch: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(500)
       },
       status: {
         type: Sequelize.INTEGER

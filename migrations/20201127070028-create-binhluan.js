@@ -25,7 +25,7 @@ module.exports = {
         onDelete: "CASCADE"
       },
       binhluan: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1000)
       },
       star: {
         type: Sequelize.INTEGER

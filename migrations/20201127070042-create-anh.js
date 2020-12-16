@@ -9,7 +9,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       link: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1000)
+      },
+      tenanh: {
+        type: Sequelize.STRING(1000)
+      },
+      status: {
+        type: Sequelize.INTEGER
+      },
+      banner: {
+        type: Sequelize.INTEGER
       },
       tourId: {
         type: Sequelize.INTEGER,

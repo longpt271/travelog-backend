@@ -5,22 +5,29 @@ var DichvuTour = require("../models").DichvuTour;
 var Anh = require("../models").Anh;
 var Binhluan = require("../models").Binhluan;
 var Diadiem = require("../models").Diadiem;
+var Tourdiadiem = require("../models").TourDiadiem;
+var Loaitour = require("../models").Loaitour;
+var TourLoaitour = require("../models").TourLoaitour;
+var Dichvu = require("../models").Dichvu;
+var TourDichvu = require("../models").DichvuTour;
+var Ngaydi = require("../models").Ngaydi;
+var TourNgaydi = require("../models").TourNgaydi;
 exports.create = (req, res) => {
-    Tour.create(req.body, { include: [Anh] }).then(data => {
+    Tour.create(req.body, { include: [Anh, Tourdiadiem, TourLoaitour, TourDichvu, TourNgaydi] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.findall = (req, res) => {
-    Tour.findAll({ include: [Anh, Diadiem] }).then(data => {
+    Tour.findAll({ include: [Anh, Diadiem, Loaitour, Dichvu, Ngaydi] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.findone = (req, res) => {
-    Tour.findOne({ where: { id: req.params.id }, include: [Anh] }).then(data => {
+    Tour.findOne({ where: { id: req.params.id }, include: [Anh, Diadiem, Loaitour, Dichvu, Ngaydi] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;

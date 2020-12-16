@@ -11,6 +11,12 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      status: {
+        type: Sequelize.INTEGER
+      },
+      mota: {
+        type: Sequelize.STRING(1000)
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

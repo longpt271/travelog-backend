@@ -27,7 +27,12 @@ module.exports = (sequelize, DataTypes) => {
         model: "Role",
         key: "id"
       }
-    }
+    },
+    chamngon: DataTypes.STRING(1000),
+    website: DataTypes.STRING,
+    kynang: DataTypes.STRING(5000),
+    facebook: DataTypes.STRING(500),
+    github: DataTypes.STRING(500)
   }, {
     sequelize,
     modelName: 'UserRole',

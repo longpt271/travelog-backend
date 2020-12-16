@@ -14,15 +14,15 @@ exports.findall = (req, res) => {
         throw er;
     })
 }
-exports.findone = (req, res) => {
-    TintucTag.findOne({ where: { id: req.params.id } }).then(data => {
+exports.findtintucId = (req, res) => {
+    TintucTag.findAll({ where: { tintucId: req.params.id } }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.delete = (req, res) => {
-    TintucTag.destroy({ where: { id: req.params.id } }).then(data => {
+    TintucTag.destroy({ where: { tintucId: req.params.id } }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;

@@ -29,18 +29,24 @@ module.exports = (sequelize, DataTypes) => {
         }),
         Tour.belongsToMany(models.Diadiem, {
           through: "TourDiadiems"
-        })
+        }),
+        Tour.hasMany(models.TourDiadiem),
+        Tour.hasMany(models.TourLoaitour),
+        Tour.hasMany(models.DichvuTour),
+        Tour.hasMany(models.TourNgaydi)
     }
   };
   Tour.init({
-    name: DataTypes.STRING,
+    name: DataTypes.STRING(500),
+    avatar: DataTypes.STRING(5000),
+    tenanh: DataTypes.STRING(1000),
     gianguoilon: DataTypes.INTEGER,
     giatreem: DataTypes.INTEGER,
     giaembe: DataTypes.INTEGER,
-    trailer: DataTypes.STRING,
-    chitiettour: DataTypes.STRING,
-    luuy: DataTypes.STRING,
-    bando: DataTypes.STRING,
+    trailer: DataTypes.STRING(1000),
+    chitiettour: DataTypes.TEXT,
+    luuy: DataTypes.TEXT,
+    bando: DataTypes.STRING(5000),
     status: DataTypes.INTEGER
   }, {
     sequelize,
