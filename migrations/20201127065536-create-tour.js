@@ -35,6 +35,9 @@ module.exports = {
       luuy: {
         type: Sequelize.TEXT
       },
+      vitri: {
+        type: Sequelize.INTEGER
+      },
       bando: {
         type: Sequelize.STRING(5000)
       },

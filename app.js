@@ -45,6 +45,7 @@ require("./routes/Hoadon")(app);
 require("./routes/TintucTag")(app);
 require("./routes/Role")(app);
 require("./routes/Lienhe")(app);
+require("./routes/Camnangdulich")(app);
 
 app.use(function (err, req, res, next) {
     res.status(500).send(err)

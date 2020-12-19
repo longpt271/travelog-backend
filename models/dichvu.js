@@ -18,6 +18,8 @@ module.exports = (sequelize, DataTypes) => {
   Dichvu.init({
     name: DataTypes.STRING,
     mota: DataTypes.STRING,
+    icon: DataTypes.STRING,
+    loadhome: DataTypes.INTEGER,
     status: DataTypes.INTEGER
   }, {
     sequelize,

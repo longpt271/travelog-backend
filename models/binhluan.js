@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     binhluan: DataTypes.STRING(1000),
     star: DataTypes.INTEGER,
+    loadhome: DataTypes.INTEGER,
     status: DataTypes.INTEGER
   }, {
     sequelize,

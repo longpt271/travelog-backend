@@ -14,6 +14,9 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
+      content: {
+        type: Sequelize.STRING(500)
+      },
       diachi: {
         type: Sequelize.STRING(1000)
       },

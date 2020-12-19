@@ -46,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
     trailer: DataTypes.STRING(1000),
     chitiettour: DataTypes.TEXT,
     luuy: DataTypes.TEXT,
+    vitri: DataTypes.INTEGER,
     bando: DataTypes.STRING(5000),
     status: DataTypes.INTEGER
   }, {

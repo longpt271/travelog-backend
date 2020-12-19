@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
     tenanh: DataTypes.STRING(500),
     diachi: DataTypes.STRING,
     sdt: DataTypes.STRING,
-    ngaysinh: DataTypes.DATE,
+    ngaysinh: DataTypes.STRING,
     status: DataTypes.INTEGER
   }, {
     sequelize,

@@ -7,4 +7,10 @@ model user thêm các thông tin của admin
 Cac model có ảnh để thêm tên ảnh vào .ok
  model role thêm status thêm trường chức năng
  model lienhe thêm status
- model ngaydi thay doi kieu ngay thanh string
+ model ngaydi thay doi kieu ngay thanh 
+  tour them trong nuoc ngoai nuoc
+ lien he them content
+  binh luan them truong loadhome
+  dich vu them loadhome
+  them table camnangdulich
+  thay doi kieu ngay thang

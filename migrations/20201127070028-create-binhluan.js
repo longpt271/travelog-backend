@@ -30,6 +30,9 @@ module.exports = {
       star: {
         type: Sequelize.INTEGER
       },
+      loadhome: {
+        type: Sequelize.INTEGER
+      },
       status: {
         type: Sequelize.INTEGER
       },

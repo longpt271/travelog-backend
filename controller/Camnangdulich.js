@@ -1,36 +1,34 @@
-var Binhluan = require('../models').Binhluan;
-var Tour = require("../models").Tour;
-var User = require("../models").User;
+var Camnangdulich = require('../models').Camnangdulich;
 exports.create = (req, res) => {
-    Binhluan.create(req.body).then(data => {
+    Camnangdulich.create(req.body).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.findall = (req, res) => {
-    Binhluan.findAll({ include: [Tour, { model: User, attributes: ['id', 'name', 'gioitinh', 'email', 'avatar'] }] }).then(data => {
+    Camnangdulich.findAll({ attributes: ["id", "name", "status", "icon", "content"] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.findone = (req, res) => {
-    Binhluan.findOne({ where: { id: req.params.id } }).then(data => {
+    Camnangdulich.findOne({ where: { id: req.params.id } }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.delete = (req, res) => {
-    Binhluan.destroy({ where: { id: req.params.id } }).then(data => {
+    Camnangdulich.destroy({ where: { id: req.params.id } }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.update = (req, res) => {
-    Binhluan.update(req.body, { where: { id: req.params.id } }).then(data => {
+    Camnangdulich.update(req.body, { where: { id: req.params.id } }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
