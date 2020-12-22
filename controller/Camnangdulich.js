@@ -7,7 +7,7 @@ exports.create = (req, res) => {
     })
 }
 exports.findall = (req, res) => {
-    Camnangdulich.findAll({ attributes: ["id", "name", "status", "icon", "content"] }).then(data => {
+    Camnangdulich.findAll({ order: [["id", "DESC"]] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;

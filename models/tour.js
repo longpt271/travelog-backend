@@ -48,7 +48,10 @@ module.exports = (sequelize, DataTypes) => {
     luuy: DataTypes.TEXT,
     vitri: DataTypes.INTEGER,
     bando: DataTypes.STRING(5000),
-    status: DataTypes.INTEGER
+    status: DataTypes.INTEGER,
+    songuoi: DataTypes.INTEGER,
+    thoigian: DataTypes.INTEGER
+
   }, {
     sequelize,
     modelName: 'Tour',
