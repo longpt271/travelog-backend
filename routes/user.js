@@ -1,5 +1,6 @@
 module.exports = app => {
     var User = require('../controller/user');
+    var checkuser = require("../controller/checkUser")
     var router = require('express').Router();
 
     router.post("/", User.create);
@@ -7,7 +8,6 @@ module.exports = app => {
     router.get('/:email', User.findone);
     router.delete('/:id', User.delete);
     router.patch('/:id', User.update);
-    router.post('/role', User.addrole);
 
     app.use("/users", router);
 }

@@ -1,6 +1,5 @@
 var User = require('../models').User;
-var UserRole = require('../models').UserRole;
-var Binhluan = require("../models").Binhluan;
+var Role = require('../models').Role;
 exports.create = (req, res) => {
     User.create(req.body).then(data => {
         res.json({ data: data })
@@ -9,7 +8,7 @@ exports.create = (req, res) => {
     })
 }
 exports.findall = (req, res) => {
-    User.findAll().then(data => {
+    User.findAll({ attributes: ['id', 'name', 'gioitinh', 'email', 'avatar', "diachi", "sdt", "ngaysinh"], order: [["id", "DESC"]], include: [Role] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
@@ -31,13 +30,6 @@ exports.delete = (req, res) => {
 }
 exports.update = (req, res) => {
     User.update(req.body, { where: { id: req.params.id } }).then(data => {
-        res.json({ data: data })
-    }).catch(er => {
-        throw er;
-    })
-}
-exports.addrole = (req, res) => {
-    UserRole.create(req.body).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;

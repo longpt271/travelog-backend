@@ -9,7 +9,7 @@ exports.create = (req, res) => {
     })
 }
 exports.findall = (req, res) => {
-    Tintuc.findAll({ order: [["id", "DESC"]], include: [Tag] }).then(data => {
+    Tintuc.findAll({ include: [Tag] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;

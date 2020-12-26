@@ -8,7 +8,7 @@ exports.create = (req, res) => {
     })
 }
 exports.findall = (req, res) => {
-    Anh.findAll({ include: [Tour] }).then(data => {
+    Anh.findAll({ order: [["id", "DESC"]], include: [{ model: Tour, attributes: ['name'] }] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
