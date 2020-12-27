@@ -14,7 +14,7 @@ exports.findall = (req, res) => {
     })
 }
 exports.findone = (req, res) => {
-    UserRole.findOne({ where: { email: req.params.email } }).then(data => {
+    UserRole.findOne({ where: { userId: req.params.id } }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
