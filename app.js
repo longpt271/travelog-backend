@@ -45,6 +45,7 @@ require("./routes/Lienhe")(app);
 require("./routes/Camnangdulich")(app);
 require("./routes/UserRole")(app);
 require("./routes/Checkuser")(app);
+require("./routes/checkemail")(app);
 
 app.use(function (err, req, res, next) {
     res.status(500).send(err)
