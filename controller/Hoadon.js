@@ -9,14 +9,14 @@ exports.create = (req, res) => {
     })
 }
 exports.findall = (req, res) => {
-    Hoadon.findAll({ include: [Tour, User] }).then(data => {
+    Hoadon.findAll({ order: [["id", "DESC"]], include: [{ model: Tour, attributes: ["id", "gianguoilon", "giatreem", "giaembe", "name"] }, { model: User, attributes: ["id", "name"] }] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.findone = (req, res) => {
-    Hoadon.findOne({ where: { id: req.params.id } }).then(data => {
+    Hoadon.findOne({ where: { id: req.params.id }, include: [{ model: Tour, attributes: ["id", "gianguoilon", "giatreem", "giaembe", "name"] }, { model: User, attributes: ["id", "name"] }] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;

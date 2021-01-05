@@ -1,7 +1,7 @@
 var TintucTag = require('../models').TintucTag;
 var Tintuc = require("../models").Tintuc;
 exports.create = (req, res) => {
-    TintucTag.create(req.body).then(data => {
+    TintucTag.bulkCreate(req.body).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;

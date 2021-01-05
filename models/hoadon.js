@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     nguoilon: DataTypes.INTEGER,
     treem: DataTypes.INTEGER,
     embe: DataTypes.INTEGER,
+    ngaydi: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Hoadon',
