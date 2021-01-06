@@ -1,7 +1,7 @@
 var Anh = require('../models').Anh;
 var Tour = require('../models').Tour;
 exports.create = (req, res) => {
-    Anh.create(req.body).then(data => {
+    Anh.bulkCreate(req.body).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
@@ -22,7 +22,7 @@ exports.findone = (req, res) => {
     })
 }
 exports.delete = (req, res) => {
-    Anh.destroy({ where: { id: req.params.id } }).then(data => {
+    Anh.destroy({ where: { tourId: req.params.id } }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
