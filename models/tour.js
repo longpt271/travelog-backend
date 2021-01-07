@@ -30,6 +30,10 @@ module.exports = (sequelize, DataTypes) => {
         Tour.belongsToMany(models.Diadiem, {
           through: "TourDiadiems"
         }),
+        Tour.belongsToMany(models.Khuyenmai, {
+          through: "TourKhuyenmais"
+        })
+      Tour.hasMany(models.TourKhuyenmai),
         Tour.hasMany(models.TourDiadiem),
         Tour.hasMany(models.TourLoaitour),
         Tour.hasMany(models.DichvuTour),

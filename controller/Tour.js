@@ -12,6 +12,7 @@ var Dichvu = require("../models").Dichvu;
 var TourDichvu = require("../models").DichvuTour;
 var Ngaydi = require("../models").Ngaydi;
 var TourNgaydi = require("../models").TourNgaydi;
+var Khuyenmai = require("../models").Khuyenmai;
 exports.create = (req, res) => {
     Tour.create(req.body, { include: [Anh, Tourdiadiem, TourLoaitour, TourDichvu, TourNgaydi] }).then(data => {
         res.json({ data: data })
@@ -20,14 +21,14 @@ exports.create = (req, res) => {
     })
 }
 exports.findall = (req, res) => {
-    Tour.findAll({ include: [Anh, Diadiem, Loaitour, Dichvu, Ngaydi] }).then(data => {
+    Tour.findAll({ include: [Anh, Diadiem, Loaitour, Dichvu, Ngaydi, Khuyenmai] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
     })
 }
 exports.findone = (req, res) => {
-    Tour.findOne({ where: { id: req.params.id }, include: [Anh, Diadiem, Loaitour, Dichvu, Ngaydi] }).then(data => {
+    Tour.findOne({ where: { id: req.params.id }, include: [Anh, Diadiem, Loaitour, Dichvu, Ngaydi, Khuyenmai] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
