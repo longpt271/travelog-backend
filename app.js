@@ -53,6 +53,7 @@ require("./routes/TourDiaidem")(app);
 require("./routes/Chitieu")(app);
 require("./routes/Khuyenmai")(app);
 require("./routes/TourKhuyenmai")(app);
+require("./routes/VnPayment")(app);
 
 app.use(function (err, req, res, next) {
     res.status(500).send(err)

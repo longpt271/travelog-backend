@@ -3,7 +3,6 @@ var DichvuTour = require('../models').DichvuTour;
 var TourNgaydi = require("../models").TourNgaydi;
 var DichvuTour = require("../models").DichvuTour;
 var Anh = require("../models").Anh;
-var Binhluan = require("../models").Binhluan;
 var Diadiem = require("../models").Diadiem;
 var Tourdiadiem = require("../models").TourDiadiem;
 var Loaitour = require("../models").Loaitour;

@@ -55,7 +55,6 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.INTEGER,
     songuoi: DataTypes.INTEGER,
     thoigian: DataTypes.INTEGER
-
   }, {
     sequelize,
     modelName: 'Tour',
