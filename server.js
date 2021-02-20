@@ -58,5 +58,4 @@ require("./routes/VnPayment")(app);
 app.use(function (err, req, res, next) {
     res.status(500).send(err)
 })
-var port = process.env.PORT || 666;
-app.listen(port, () => { console.log("Đang chạy trên cổng " + port + " :))"); })
+app.listen(process.env.PORT || 666, () => { console.log("Đang chạy trên cổng " + port + " :))"); })
