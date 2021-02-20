@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "b39408e11d983d",
-    "password": "285e4405",
-    "database": "heroku_f466dbdc0cc463d",
+    "username": "b6b5ce7cf768e6",
+    "password": "8030da8b",
+    "database": "heroku_d761d62c2bce728",
     "host": "us-cdbr-east-03.cleardb.com",
     "dialect": "mysql",
     "logging": true
