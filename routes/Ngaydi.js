@@ -1,5 +1,5 @@
 module.exports = app => {
-    var ngaydi = require('../controller/ngaydi');
+    var ngaydi = require('../controller/Ngaydi');
     var router = require('express').Router();
 
     router.post("/", ngaydi.create);
