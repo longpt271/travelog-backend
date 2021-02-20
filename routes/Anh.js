@@ -1,6 +1,6 @@
 
 module.exports = app => {
-    var anh = require('../controller/anh');
+    var anh = require('../controller/Anh');
     var router = require('express').Router();
 
     router.post("/", anh.create);

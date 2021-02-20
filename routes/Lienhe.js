@@ -1,5 +1,5 @@
 module.exports = app => {
-    var lienhe = require('../controller/lienhe');
+    var lienhe = require('../controller/Lienhe');
     var router = require('express').Router();
 
     router.post("/", lienhe.create);

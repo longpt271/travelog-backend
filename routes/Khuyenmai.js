@@ -1,5 +1,5 @@
 module.exports = app => {
-    var khuyenmai = require('../controller/khuyenmai');
+    var khuyenmai = require('../controller/Khuyenmai');
     var router = require('express').Router();
 
     router.post("/", khuyenmai.create);

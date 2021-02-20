@@ -1,5 +1,5 @@
 module.exports = app => {
-    var loaitour = require('../controller/loaitour');
+    var loaitour = require('../controller/Loaitour');
     var router = require('express').Router();
 
     router.post("/", loaitour.create);

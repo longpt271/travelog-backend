@@ -1,5 +1,5 @@
 module.exports = app => {
-    var role = require('../controller/role');
+    var role = require('../controller/Role');
     var router = require('express').Router();
 
     router.post("/", role.create);

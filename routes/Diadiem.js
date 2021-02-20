@@ -1,5 +1,5 @@
 module.exports = app => {
-    var diadiem = require('../controller/diadiem');
+    var diadiem = require('../controller/Diadiem');
     var router = require('express').Router();
 
     router.post("/", diadiem.create);
