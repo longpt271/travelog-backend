@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "b6b5ce7cf768e6",
-    "password": "8030da8b",
-    "database": "heroku_d761d62c2bce728",
-    "host": "us-cdbr-east-03.cleardb.com",
+    "username": "root",
+    "password": "123456789",
+    "database": "travelbe",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "logging": true
   },
