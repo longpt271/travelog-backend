@@ -19,7 +19,9 @@ module.exports = (sequelize, DataTypes) => {
         User.belongsToMany(models.Tour, {
           through: "Binhluans"
         }),
-        User.hasMany(models.UserRole)
+        User.hasMany(models.UserRole),
+        User.hasMany(models.Hoadoncanhan),
+        User.hasMany(models.Thongbao)
     }
   };
   User.init({

@@ -54,6 +54,9 @@ require("./routes/Chitieu")(app);
 require("./routes/Khuyenmai")(app);
 require("./routes/TourKhuyenmai")(app);
 require("./routes/VnPayment")(app);
+require("./routes/Chiphi")(app);
+require("./routes/Hoadoncanhan")(app);
+require("./routes/Thongbao")(app);
 
 app.use(function (err, req, res, next) {
     res.status(500).send(err)

@@ -16,7 +16,7 @@ exports.findall = (req, res) => {
     })
 }
 exports.findone = (req, res) => {
-    Hoadon.findOne({ where: { id: req.params.id }, include: [{ model: Tour, attributes: ["id", "gianguoilon", "giatreem", "giaembe", "name"] }, { model: User, attributes: ["id", "name"] }] }).then(data => {
+    Hoadon.findOne({ attributes: ["id", "tourId", "userId", "thanhtien", "nguoilon", "treem", "embe", "ngaydi"], where: { id: req.params.id }, include: [{ model: Tour, attributes: ["id", "gianguoilon", "giatreem", "giaembe", "name"] }, { model: User, attributes: ["id", "name"] }] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
