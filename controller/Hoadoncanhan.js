@@ -1,4 +1,5 @@
 var Hoadoncanhan = require('../models').Hoadoncanhan;
+var User = require("../models").User;
 exports.create = (req, res) => {
     Hoadoncanhan.create(req.body).then(data => {
         res.json({ data: data })
@@ -7,7 +8,7 @@ exports.create = (req, res) => {
     })
 }
 exports.findall = (req, res) => {
-    Hoadoncanhan.findAll().then(data => {
+    Hoadoncanhan.findAll({ include: [{ model: User, attributes: ['name'] }] }).then(data => {
         res.json({ data: data })
     }).catch(er => {
         throw er;
