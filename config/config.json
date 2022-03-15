@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "123456789",
-    "database": "travelbe",
+    "password": "",
+    "database": "travelog",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "logging": true

@@ -37,6 +37,10 @@ module.exports = (sequelize, DataTypes) => {
     treem: DataTypes.INTEGER,
     embe: DataTypes.INTEGER,
     ngaydi: DataTypes.STRING,
+    status: DataTypes.INTEGER,
+    agree: DataTypes.INTEGER,
+    hinhthuc: DataTypes.INTEGER,
+    pay: DataTypes.INTEGER,
     thanhtien: DataTypes.INTEGER
   }, {
     sequelize,

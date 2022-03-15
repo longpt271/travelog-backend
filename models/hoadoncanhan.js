@@ -29,7 +29,9 @@ module.exports = (sequelize, DataTypes) => {
     giatien: DataTypes.INTEGER,
     luuy: DataTypes.STRING(1000),
     kiemduyet: DataTypes.INTEGER,
-    agree: DataTypes.INTEGER
+    agree: DataTypes.INTEGER,
+    pay: DataTypes.INTEGER,
+    status: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Hoadoncanhan',

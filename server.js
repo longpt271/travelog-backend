@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.get("/", (req, res) => {
-    res.send("<h1>Chào tất cả các bạn đến với api vinhtravel!</h1>");
+    res.send("<h1>Chào tất cả các bạn đến với api Travelog!</h1>");
 }
 )
 app.post("/payment", async (req, res) => {
@@ -27,9 +27,7 @@ app.post("/payment", async (req, res) => {
 
 require('./routes/login')(app);
 require("./routes/user")(app);
-require("./routes/Tag")(app);
 require("./routes/Quocgia")(app);
-require("./routes/Tintuc")(app);
 require("./routes/Tour")(app);
 require("./routes/Ngaydi")(app);
 require("./routes/Loaitour")(app);
@@ -39,7 +37,6 @@ require("./routes/Binhluan")(app);
 require("./routes/Anh")(app);
 require("./routes/Dichvu")(app);
 require("./routes/Hoadon")(app);
-require("./routes/TintucTag")(app);
 require("./routes/Role")(app);
 require("./routes/Lienhe")(app);
 require("./routes/Camnangdulich")(app);
@@ -57,6 +54,7 @@ require("./routes/VnPayment")(app);
 require("./routes/Chiphi")(app);
 require("./routes/Hoadoncanhan")(app);
 require("./routes/Thongbao")(app);
+require("./routes/SendEmail")(app);
 
 app.use(function (err, req, res, next) {
     res.status(500).send(err)
