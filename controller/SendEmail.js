@@ -14,7 +14,7 @@ exports.sendEmail = async (req, res) => {
 
     // Step 2
     let mailOptions = {
-        from: 'longpt271@gmail.com', // TODO: email receiver
+        from: 'longpt.hust@gmail.com', // TODO: email receiver
         to: data.email, // TODO: email sender
         subject: 'Đăng ký tour thành công!',
         text: 'Chúc bạn đã đặt tour thành công tour ' + data.tentour + ' với giá ' + data.thanhtien + 'vnđ Xin chúc mừng bạn !',
